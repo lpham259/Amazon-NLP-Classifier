@@ -1,0 +1,26 @@
+review_text,stars,product_category,verified_purchase,sentiment
+This product exceeded my expectations! Amazing quality and fast shipping.,5,Electronics,True,2
+Absolutely love this! Best purchase I've made in years. Highly recommend!,5,Electronics,True,2
+"Outstanding quality, exactly as described. Will definitely buy again!",5,Electronics,True,2
+Perfect! Works exactly as expected. Great value for money.,5,Electronics,True,2
+Excellent product! My family loves it. Five stars!,5,Electronics,True,2
+"Really good product, minor issues but overall satisfied.",4,Electronics,True,2
+"Good quality, fast delivery. Worth the price.",4,Electronics,True,2
+"Nice product, works well. Small packaging issue but content is great.",4,Electronics,True,2
+"Solid product, meets expectations. Would recommend.",4,Electronics,True,2
+"Good purchase, happy with the quality.",4,Electronics,True,2
+"It's okay, nothing special but does the job.",3,Electronics,True,1
+"Average product, meets basic expectations.",3,Electronics,True,1
+"Not bad, not great either. Just okay.",3,Electronics,True,1
+"Decent quality, could be better for the price.",3,Electronics,True,1
+"It works, but there are better options available.",3,Electronics,True,1
+Disappointed with the quality. Expected better.,2,Electronics,True,0
+"Poor quality materials, not worth the money.",2,Electronics,True,0
+Product doesn't match the description. Misleading.,2,Electronics,True,0
+"Cheap feeling, wouldn't buy again.",2,Electronics,True,0
+"Below average quality, has some issues.",2,Electronics,True,0
+Terrible quality! Complete waste of money!,1,Electronics,True,0
+Broke after one use. Do not buy this!,1,Electronics,True,0
+Worst purchase ever. Completely useless.,1,Electronics,True,0
+"Defective product, doesn't work at all.",1,Electronics,True,0
+"Horrible quality, terrible customer service.",1,Electronics,True,0

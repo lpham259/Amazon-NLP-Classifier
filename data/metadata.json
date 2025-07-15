@@ -1,0 +1,18 @@
+{
+  "total_samples": 25,
+  "sentiment_distribution": {
+    "2": 10,
+    "0": 10,
+    "1": 5
+  },
+  "rating_distribution": {
+    "5": 5,
+    "4": 5,
+    "3": 5,
+    "2": 5,
+    "1": 5
+  },
+  "text_length_stats": {
+    "mean": 48.64,
+    "median": 45.0,
+    "min": 
