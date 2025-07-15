@@ -25,12 +25,18 @@ class ModelEvaluator:
         self.tokenizer = AutoTokenizer.from_pretrained(str(model_path))
         self.model = AutoModelForSequenceClassification.from_pretrained(str(model_path))
         
+        # Use CPU to match training device
+        self.device = torch.device('cpu')
+        self.model.to(self.device)
+        print(f"Device set to use: {self.device}")
+        
         # Create sentiment analysis pipeline
         self.sentiment_pipeline = pipeline(
             "sentiment-analysis",
             model=self.model,
             tokenizer=self.tokenizer,
-            return_all_scores=True
+            return_all_scores=True,
+            device=-1  # Force CPU usage
         )
         
         # Load evaluation results if available
@@ -55,6 +61,9 @@ class ModelEvaluator:
             padding=True, 
             max_length=512
         )
+        
+        # Move inputs to CPU
+        inputs = {k: v.to(self.device) for k, v in inputs.items()}
         
         # Make prediction
         self.model.eval()
@@ -92,6 +101,9 @@ class ModelEvaluator:
                 padding=True,
                 max_length=512
             )
+            
+            # Move inputs to device
+            inputs = {k: v.to(self.device) for k, v in inputs.items()}
             
             # Make predictions
             self.model.eval()
@@ -452,7 +464,7 @@ def main():
     """Main evaluation pipeline"""
     
     # Specify model path - update this to your trained model
-    model_path = "./models/sentiment_model_final"
+    model_path = "./models/simple_sentiment_model"
     
     # Check if model exists
     if not Path(model_path).exists():
